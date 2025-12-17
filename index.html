@@ -13,11 +13,10 @@
             --cor-info: #00A0DC;        /* Azul Claro */
             --cor-rodape: #325565;      /* Azul Escuro */
             --cor-texto: #414042;       /* Cinza Escuro */
-            --cor-preto: #1a1a1a;       /* Detalhes pretos */
             --branco: #ffffff;
         }
 
-        /* --- ESTILOS GERAIS (Reset & Typography) --- */
+        /* --- ESTILOS GERAIS --- */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -28,7 +27,7 @@
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--cor-fundo);
             color: var(--cor-texto);
-            line-height: 1.6;
+            line-height: 1.5;
             padding-bottom: 40px;
         }
 
@@ -61,7 +60,7 @@
             padding: 20px;
         }
 
-        /* --- CARDS (Cartões de Conteúdo) --- */
+        /* --- CARDS (Cartões) --- */
         .card {
             background: var(--branco);
             border-radius: 12px;
@@ -80,7 +79,7 @@
             gap: 8px;
         }
 
-        /* --- SEÇÃO: COMO USAR (Passo a Passo) --- */
+        /* --- SEÇÃO: COMO USAR --- */
         .step {
             display: flex;
             align-items: flex-start;
@@ -102,42 +101,26 @@
             font-size: 1.1rem;
         }
 
-        .step-text strong {
-            color: var(--cor-destaque);
-        }
+        .step-text strong { color: var(--cor-destaque); }
 
-        /* --- SEÇÃO: CANAIS --- */
-        .channel-list {
+        /* --- SEÇÃO: BOAS PRÁTICAS (NOVA) --- */
+        .practices-list {
             list-style: none;
+            padding: 0;
         }
 
-        .channel-item {
-            background-color: #f9f9f9;
-            border: 1px solid #eee;
-            margin-bottom: 10px;
-            padding: 15px;
-            border-radius: 8px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .practices-list li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            padding-left: 15px;
+            border-left: 3px solid #eee; /* Linha sutil para guiar leitura */
         }
-
-        .channel-number {
-            font-weight: bold;
-            font-size: 1.1rem;
+        
+        .practices-list li strong {
             color: var(--cor-primaria);
+            display: block; /* Quebra linha para destaque */
+            margin-bottom: 2px;
         }
-
-        .channel-name {
-            font-weight: 600;
-            color: var(--cor-texto);
-        }
-
-        /* Cores específicas para bordas dos canais */
-        .ch-1 { border-left: 6px solid var(--cor-destaque); } /* Laranja */
-        .ch-2 { border-left: 6px solid var(--cor-info); }     /* Azul Claro */
-        .ch-3 { border-left: 6px solid var(--cor-primaria); } /* Verde */
-        .ch-4 { border-left: 6px solid var(--cor-preto); }    /* Preto */
 
         /* --- DICA VISUAL LED --- */
         .led-guide {
@@ -164,19 +147,17 @@
             border-radius: 50%;
             margin-bottom: 5px;
         }
-
-        /* Animação para bateria fraca */
         @keyframes blink { 50% { opacity: 0; } }
 
-        /* --- TROUBLESHOOTING --- */
+        /* --- ALERTA --- */
         .alert-box {
-            background-color: rgba(241, 90, 34, 0.1); /* Laranja suave */
+            background-color: rgba(241, 90, 34, 0.1); 
             border: 1px solid var(--cor-destaque);
             color: #d64512;
             padding: 15px;
             border-radius: 8px;
             font-size: 0.95rem;
-            margin-top: 15px;
+            margin-top: 5px;
         }
 
         /* --- RODAPÉ --- */
@@ -194,7 +175,7 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
-            background-color: var(--cor-destaque); /* Mantém a identidade visual Laranja */
+            background-color: var(--cor-destaque);
             color: var(--branco);
             text-decoration: none;
             padding: 12px 30px;
@@ -206,13 +187,7 @@
             transition: transform 0.2s;
         }
 
-        .btn-support:active {
-            transform: scale(0.98);
-        }
-
-        /* Se quiser que o botão seja VERDE (estilo WhatsApp), 
-           descomente a linha abaixo: */
-        /* .btn-support { background-color: #25D366; } */
+        .btn-support:active { transform: scale(0.98); }
 
     </style>
 </head>
@@ -257,41 +232,49 @@
         </div>
 
         <div class="card">
-            <h2>📻 Lista de Canais</h2>
-            <p style="margin-bottom: 15px; font-size: 0.9rem; color: #666;">Gire o botão superior central para selecionar:</p>
-            
-            <ul class="channel-list">
-                <li class="channel-item ch-1">
-                    <span class="channel-name">Coordenação Geral</span>
-                    <span class="channel-number">CH 01</span>
+            <h2>✅ Boas Práticas</h2>
+            <ul class="practices-list">
+                <li>
+                    <strong>Seja breve e objetivo:</strong> 
+                    Transmita mensagens claras e diretas.
                 </li>
-                <li class="channel-item ch-2">
-                    <span class="channel-name">Logística / Transporte</span>
-                    <span class="channel-number">CH 02</span>
+                <li>
+                    <strong>Identifique-se:</strong> 
+                    Sempre diga seu nome/setor ao iniciar a comunicação.
                 </li>
-                <li class="channel-item ch-3">
-                    <span class="channel-name">Palco / Cerimonial</span>
-                    <span class="channel-number">CH 03</span>
+                <li>
+                    <strong>Use linguagem profissional:</strong> 
+                    Mantenha o tom respeitoso e adequado.
                 </li>
-                <li class="channel-item ch-4">
-                    <span class="channel-name">Segurança / Apoio</span>
-                    <span class="channel-number">CH 04</span>
+                <li>
+                    <strong>Aguarde sua vez:</strong> 
+                    Não interrompa transmissões em andamento.
+                </li>
+                <li>
+                    <strong>Confirme recebimento:</strong> 
+                    Use "recebido", "entendido" ou "OK" para confirmar.
+                </li>
+                <li>
+                    <strong>Evite informações sensíveis:</strong> 
+                    O canal é compartilhado e público.
+                </li>
+                <li>
+                    <strong>Teste regularmente:</strong> 
+                    Verifique periodicamente se o rádio está funcionando.
                 </li>
             </ul>
         </div>
 
-        <div class="card" style="border-left-color: var(--cor-info);">
-            <h2>✅ Dicas Rápidas</h2>
-            <ul style="padding-left: 20px; margin-bottom: 15px; font-size: 0.95rem;">
-                <li style="margin-bottom: 8px;">Use <strong>"Ciente"</strong> ou "QSL" para confirmar mensagens.</li>
-                <li style="margin-bottom: 8px;">Nunca interrompa uma conversa em andamento.</li>
-                <li>Seja breve e direto.</li>
-            </ul>
-
+        <div class="card" style="border-left-color: var(--cor-destaque);">
+            <h2>⚠️ Solução de Problemas</h2>
             <div class="alert-box">
                 <strong>O rádio apitou?</strong><br>
-                Isso indica <strong>bateria fraca</strong>. Procure a base de apoio imediatamente para trocar o equipamento.
+                Isso geralmente indica <strong>bateria fraca</strong>. Procure a base de apoio imediatamente para trocar o equipamento.
             </div>
+            <p style="margin-top: 15px; font-size: 0.9rem;">
+                <strong>Não está ouvindo nada?</strong><br>
+                Verifique se o rádio está ligado e o volume ajustado (gire o botão superior direito).
+            </p>
         </div>
 
     </div>
@@ -300,7 +283,7 @@
         <p style="font-size: 1.1rem; font-weight: 500;">Precisa de ajuda técnica?</p>
         <p style="font-size: 0.9rem; margin-bottom: 15px; opacity: 0.8;">Clique abaixo para falar com a TI</p>
         
-        <a href="https://wa.me/558534597061?text=Ol%C3%A1%2C+estou+no+evento+da+SME+e+preciso+de+ajuda+com+o+r%C3%A1dio." 
+        <a href="https://wa.me/5585999999999?text=Ol%C3%A1%2C+estou+no+evento+da+SME+e+preciso+de+ajuda+com+o+r%C3%A1dio." 
            class="btn-support"
            target="_blank">
            📱 Chamar no WhatsApp
