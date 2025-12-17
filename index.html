@@ -42,6 +42,15 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
+        /* Estilo da Imagem do Logo */
+        .header-logo {
+            max-height: 80px;         /* Limita a altura para não ficar gigante */
+            max-width: 100%;          /* Garante que não estoure a tela */
+            width: auto;
+            display: block;
+            margin: 0 auto 15px auto; /* Centraliza */
+        }
+
         header h1 {
             font-size: 1.5rem;
             font-weight: 700;
@@ -103,7 +112,7 @@
 
         .step-text strong { color: var(--cor-destaque); }
 
-        /* --- SEÇÃO: BOAS PRÁTICAS (NOVA) --- */
+        /* --- SEÇÃO: BOAS PRÁTICAS --- */
         .practices-list {
             list-style: none;
             padding: 0;
@@ -113,12 +122,12 @@
             margin-bottom: 12px;
             font-size: 0.95rem;
             padding-left: 15px;
-            border-left: 3px solid #eee; /* Linha sutil para guiar leitura */
+            border-left: 3px solid #eee;
         }
         
         .practices-list li strong {
             color: var(--cor-primaria);
-            display: block; /* Quebra linha para destaque */
+            display: block;
             margin-bottom: 2px;
         }
 
@@ -194,6 +203,8 @@
 <body>
 
     <header>
+        <img src="logo-educ.png" alt="Logo SME Fortaleza" class="header-logo">
+        
         <h1>SME Fortaleza</h1>
         <p>Guia de Uso - Rádio Frequência</p>
     </header>
@@ -283,7 +294,7 @@
         <p style="font-size: 1.1rem; font-weight: 500;">Precisa de ajuda técnica?</p>
         <p style="font-size: 0.9rem; margin-bottom: 15px; opacity: 0.8;">Clique abaixo para falar com a TI</p>
         
-        <a href="https://wa.me/5585999999999?text=Ol%C3%A1%2C+estou+no+evento+da+SME+e+preciso+de+ajuda+com+o+r%C3%A1dio." 
+        <a href="https://wa.me/5585345497061?text=Ol%C3%A1%2C+estou+no+evento+da+SME+e+preciso+de+ajuda+com+o+r%C3%A1dio." 
            class="btn-support"
            target="_blank">
            📱 Chamar no WhatsApp
