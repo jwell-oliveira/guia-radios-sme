@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Rádio - SME Fortaleza</title>
+    <style>
+        /* --- VARIÁVEIS DA PALETA DE CORES --- */
+        :root {
+            --cor-fundo: #FFE6CB;       /* Bege */
+            --cor-primaria: #009889;    /* Verde Petróleo */
+            --cor-destaque: #F15A22;    /* Laranja */
+            --cor-info: #00A0DC;        /* Azul Claro */
+            --cor-rodape: #325565;      /* Azul Escuro */
+            --cor-texto: #414042;       /* Cinza Escuro */
+            --cor-preto: #1a1a1a;       /* Detalhes pretos da paleta */
+            --branco: #ffffff;
+        }
+
+        /* --- ESTILOS GERAIS (Reset & Typography) --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            line-height: 1.6;
+            padding-bottom: 80px; /* Espaço para o rodapé fixo se necessário */
+        }
+
+        /* --- CABEÇALHO --- */
+        header {
+            background-color: var(--cor-primaria);
+            color: var(--branco);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--cor-destaque);
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* --- CONTAINER PRINCIPAL --- */
+        .container {
+            max-width: 600px; /* Limite para não ficar esticado em desktop */
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- CARDS (Cartões de Conteúdo) --- */
+        .card {
+            background: var(--branco);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-left: 6px solid var(--cor-rodape);
+        }
+
+        h2 {
+            color: var(--cor-primaria);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* --- SEÇÃO: COMO USAR (Passo a Passo) --- */
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .step-number {
+            background-color: var(--cor-destaque);
+            color: var(--branco);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-right: 12px;
+        }
+
+        .step-text strong {
+            color: var(--cor-destaque);
+        }
+
+        /* --- SEÇÃO: CANAIS --- */
+        .channel-list {
+            list-style: none;
+        }
+
+        .channel-item {
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            margin-bottom: 10px;
+            padding: 12px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .channel-number {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: var(--cor-primaria);
+        }
+
+        .channel-name {
+            font-weight: 500;
+        }
+
+        /* Cores específicas para canais */
+        .ch-1 { border-left: 5px solid var(--cor-destaque); } /* Laranja */
+        .ch-2 { border-left: 5px solid var(--cor-info); }     /* Azul Claro */
+        .ch-3 { border-left: 5px solid var(--cor-primaria); } /* Verde */
+        .ch-4 { border-left: 5px solid var(--cor-preto); }    /* Cinza/Preto */
+
+        /* --- DICA VISUAL INTELBRAS --- */
+        .led-guide {
+            display: flex;
+            gap: 10px;
+            justify-content: space-around;
+            margin-top: 10px;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+        .led-item span {
+            display: block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin: 0 auto 5px auto;
+        }
+
+        /* --- TROUBLESHOOTING --- */
+        .alert-box {
+            background-color: rgba(241, 90, 34, 0.1); /* Laranja transparente */
+            border: 1px solid var(--cor-destaque);
+            color: #d64512;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+        }
+
+        /* --- RODAPÉ --- */
+        footer {
+            background-color: var(--cor-rodape);
+            color: var(--branco);
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 20px;
+        }
+
+        .btn-support {
+            display: inline-block;
+            background-color: var(--cor-destaque);
+            color: var(--branco);
+            text-decoration: none;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        /* Icones simulados com emoji para facilitar */
+        .icon { font-size: 1.2rem; }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SME Fortaleza</h1>
+        <p>Guia Rápido de Rádio Frequência</p>
+    </header>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>📢 Como Falar (PTT)</h2>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-text">
+                    Segure o botão lateral <strong>(PTT)</strong>.
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-text">
+                    <strong>Aguarde 1 segundo</strong> antes de começar a falar (para evitar corte de áudio).
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-text">
+                    Fale de forma clara e solte o botão para ouvir a resposta.
+                </div>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+            
+            <p style="font-size: 0.9rem; text-align: center; margin-bottom: 10px;"><strong>Entenda a Luz do Rádio (LED):</strong></p>
+            <div class="led-guide">
+                <div class="led-item"><span style="background: red;"></span>Falando</div>
+                <div class="led-item"><span style="background: green;"></span>Ouvindo</div>
+                <div class="led-item"><span style="background: orange; animation: blink 1s infinite;"></span>Bateria Fraca</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📻 Canais do Evento</h2>
+            <p style="margin-bottom: 15px; font-size: 0.9rem;">Gire o botão superior central para selecionar:</p>
+            
+            <ul class="channel-list">
+                <li class="channel-item ch-1">
+                    <span class="channel-name">Coordenação Geral</span>
+                    <span class="channel-number">CH 01</span>
+                </li>
+                <li class="channel-item ch-2">
+                    <span class="channel-name">Logística / Transporte</span>
+                    <span class="channel-number">CH 02</span>
+                </li>
+                <li class="channel-item ch-3">
+                    <span class="channel-name">Segurança / Limpeza</span>
+                    <span class="channel-number">CH 03</span>
+                </li>
+                <li class="channel-item ch-4">
+                    <span class="channel-name">Emergência Médica</span>
+                    <span class="channel-number">CH 16</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card" style="border-left-color: var(--cor-info);">
+            <h2>✅ Regras de Ouro</h2>
+            <ul style="padding-left: 20px; font-size: 0.95rem; margin-bottom: 20px;">
+                <li>Seja breve e objetivo.</li>
+                <li>Use "Ciente" ou "QSL" para confirmar.</li>
+                <li>Não interrompa quando ouvir alguém falando.</li>
+            </ul>
+
+            <div class="alert-box">
+                <strong>O rádio apitou?</strong><br>
+                Isso geralmente indica bateria fraca. Procure a base de apoio para troca imediata.
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Precisa de ajuda técnica?</p>
+        <a href="tel:+558500000000" class="btn-support">Ligar para Suporte TI</a>
+        <br><br>
+        <small>Secretaria Municipal da Educação de Fortaleza</small>
+    </footer>
+
+</body>
+</html>
