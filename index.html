@@ -17,12 +17,7 @@
         }
 
         /* --- ESTILOS GERAIS --- */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--cor-fundo);
@@ -41,35 +36,20 @@
             border-radius: 0 0 20px 20px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-
-        /* Estilo da Imagem do Logo */
         .header-logo {
-            max-height: 200px;         /* Limita a altura para não ficar gigante */
-            max-width: 100%;          /* Garante que não estoure a tela */
+            max-height: 200px;
+            max-width: 100%;
             width: auto;
             display: block;
-            margin: 0 auto 15px auto; /* Centraliza */
+            margin: 0 auto 15px auto;
         }
+        header h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 5px; }
+        header p { font-size: 0.95rem; opacity: 0.9; }
 
-        header h1 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
+        /* --- CONTAINER --- */
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
 
-        header p {
-            font-size: 0.95rem;
-            opacity: 0.9;
-        }
-
-        /* --- CONTAINER PRINCIPAL --- */
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* --- CARDS (Cartões) --- */
+        /* --- CARDS --- */
         .card {
             background: var(--branco);
             border-radius: 12px;
@@ -78,7 +58,6 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             border-left: 6px solid var(--cor-rodape);
         }
-
         h2 {
             color: var(--cor-primaria);
             font-size: 1.2rem;
@@ -88,123 +67,88 @@
             gap: 8px;
         }
 
-        /* --- SEÇÃO: COMO USAR --- */
-        .step {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 15px;
-        }
-
+        /* --- PASSO A PASSO --- */
+        .step { display: flex; align-items: flex-start; margin-bottom: 15px; }
         .step-number {
             background-color: var(--cor-destaque);
             color: var(--branco);
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            flex-shrink: 0;
-            margin-right: 12px;
-            font-size: 1.1rem;
+            width: 32px; height: 32px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: bold; flex-shrink: 0; margin-right: 12px; font-size: 1.1rem;
         }
-
         .step-text strong { color: var(--cor-destaque); }
 
-        /* --- SEÇÃO: BOAS PRÁTICAS --- */
-        .practices-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .practices-list li {
-            margin-bottom: 12px;
-            font-size: 0.95rem;
-            padding-left: 15px;
-            border-left: 3px solid #eee;
-        }
-        
-        .practices-list li strong {
-            color: var(--cor-primaria);
-            display: block;
-            margin-bottom: 2px;
-        }
-
-        /* --- DICA VISUAL LED --- */
+        /* --- LED GUIDE --- */
         .led-guide {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 15px;
-            font-size: 0.8rem;
-            text-align: center;
-            background-color: #f4f4f4;
-            padding: 10px;
-            border-radius: 8px;
+            display: flex; gap: 10px; justify-content: center;
+            margin-top: 15px; font-size: 0.8rem; text-align: center;
+            background-color: #f4f4f4; padding: 10px; border-radius: 8px;
         }
-        .led-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 33%;
-        }
-        .led-item span {
-            display: block;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            margin-bottom: 5px;
-        }
+        .led-item { display: flex; flex-direction: column; align-items: center; width: 33%; }
+        .led-item span { display: block; width: 12px; height: 12px; border-radius: 50%; margin-bottom: 5px; }
         @keyframes blink { 50% { opacity: 0; } }
 
-        /* --- ALERTA --- */
-        .alert-box {
-            background-color: rgba(241, 90, 34, 0.1); 
-            border: 1px solid var(--cor-destaque);
-            color: #d64512;
+        /* --- BOAS PRÁTICAS --- */
+        .practices-list { list-style: none; padding: 0; }
+        .practices-list li {
+            margin-bottom: 12px; font-size: 0.95rem; padding-left: 15px;
+            border-left: 3px solid #eee;
+        }
+        .practices-list li strong { color: var(--cor-primaria); display: block; margin-bottom: 2px; }
+
+        /* --- NOVO: ESTILOS DO MAPA --- */
+        .map-locations {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Duas colunas */
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .location-item {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            border: 1px solid #eee;
+        }
+        .location-item strong { color: var(--cor-primaria); display: block; font-size: 0.95rem; }
+        
+        .btn-pdf {
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            width: 100%;
+            background-color: var(--cor-rodape);
+            color: var(--branco);
+            text-decoration: none;
             padding: 15px;
             border-radius: 8px;
-            font-size: 0.95rem;
-            margin-top: 5px;
+            font-weight: bold;
+            transition: background 0.2s;
         }
+        .btn-pdf:hover { background-color: var(--cor-primaria); }
 
         /* --- RODAPÉ --- */
         footer {
-            background-color: var(--cor-rodape);
-            color: var(--branco);
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 20px;
+            background-color: var(--cor-rodape); color: var(--branco);
+            text-align: center; padding: 30px 20px; margin-top: 20px;
             border-radius: 20px 20px 0 0;
         }
-
         .btn-support {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            background-color: var(--cor-destaque);
-            color: var(--branco);
-            text-decoration: none;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1rem;
-            margin-top: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-            transition: transform 0.2s;
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            background-color: var(--cor-destaque); color: var(--branco);
+            text-decoration: none; padding: 12px 30px; border-radius: 50px;
+            font-weight: bold; font-size: 1rem; margin-top: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2); transition: transform 0.2s;
         }
-
         .btn-support:active { transform: scale(0.98); }
-
+        .alert-box {
+            background-color: rgba(241, 90, 34, 0.1); border: 1px solid var(--cor-destaque);
+            color: #d64512; padding: 15px; border-radius: 8px; font-size: 0.95rem; margin-top: 5px;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="logo-educ.png" alt="Logo SME Fortaleza" class="header-logo">
-        
+        <img src="logo.png" alt="Logo SME Fortaleza" class="header-logo">
         <h1>Guia de Uso - Rádio Frequência</h1>
     </header>
 
@@ -212,66 +156,60 @@
 
         <div class="card">
             <h2>📢 Como Falar (PTT)</h2>
-            
             <div class="step">
                 <div class="step-number">1</div>
-                <div class="step-text">
-                    Segure o botão lateral <strong>(PTT)</strong>.
-                </div>
+                <div class="step-text">Segure o botão lateral <strong>(PTT)</strong>.</div>
             </div>
-            
             <div class="step">
                 <div class="step-number">2</div>
-                <div class="step-text">
-                    <strong>Aguarde 1 segundo</strong> antes de começar a falar (evita cortar sua voz).
-                </div>
+                <div class="step-text"><strong>Aguarde 1 segundo</strong> antes de falar.</div>
             </div>
-
             <div class="step">
                 <div class="step-number">3</div>
-                <div class="step-text">
-                    Fale próximo ao microfone e solte o botão para ouvir.
-                </div>
+                <div class="step-text">Solte o botão para ouvir.</div>
             </div>
-
             <div class="led-guide">
                 <div class="led-item"><span style="background: red;"></span><strong>Vermelho</strong><br>Falando</div>
                 <div class="led-item"><span style="background: green;"></span><strong>Verde</strong><br>Ouvindo</div>
-                <div class="led-item"><span style="background: orange; animation: blink 1s infinite;"></span><strong>Piscando</strong><br>Bateria Fraca</div>
+                <div class="led-item"><span style="background: orange; animation: blink 1s infinite;"></span><strong>Piscando</strong><br>Bateria</div>
             </div>
+        </div>
+
+        <div class="card" style="border-left-color: var(--cor-info);">
+            <h2>🗺️ Planta e Localização</h2>
+            <p style="margin-bottom: 15px; font-size: 0.9rem;">Pontos de referência rápidos do CFO:</p>
+            
+            <div class="map-locations">
+                <div class="location-item">
+                    <strong>Portão A</strong>
+                    Entrada Castelão
+                </div>
+                <div class="location-item">
+                    <strong>Portão B</strong>
+                    Entrada Silas Munguba
+                </div>
+                <div class="location-item">
+                    <strong>Alimentação</strong>
+                    Próximo ao Portão A (Setores A, B, C)
+                </div>
+                <div class="location-item">
+                    <strong>Achados e Perdidos</strong>
+                    Próximo ao Portão A
+                </div>
+            </div>
+
+            <a href="mapa.pdf" target="_blank" class="btn-pdf">
+                📄 Abrir Planta Completa (PDF)
+            </a>
         </div>
 
         <div class="card">
             <h2>✅ Boas Práticas</h2>
             <ul class="practices-list">
-                <li>
-                    <strong>Seja breve e objetivo:</strong> 
-                    Transmita mensagens claras e diretas.
-                </li>
-                <li>
-                    <strong>Identifique-se:</strong> 
-                    Sempre diga seu nome/setor ao iniciar a comunicação.
-                </li>
-                <li>
-                    <strong>Use linguagem profissional:</strong> 
-                    Mantenha o tom respeitoso e adequado.
-                </li>
-                <li>
-                    <strong>Aguarde sua vez:</strong> 
-                    Não interrompa transmissões em andamento.
-                </li>
-                <li>
-                    <strong>Confirme recebimento:</strong> 
-                    Use "recebido", "entendido" ou "OK" para confirmar.
-                </li>
-                <li>
-                    <strong>Evite informações sensíveis:</strong> 
-                    O canal é compartilhado e público.
-                </li>
-                <li>
-                    <strong>Teste regularmente:</strong> 
-                    Verifique periodicamente se o rádio está funcionando.
-                </li>
+                <li><strong>Seja breve:</strong> Mensagens curtas.</li>
+                <li><strong>Identifique-se:</strong> Diga seu nome/setor.</li>
+                <li><strong>Confirme:</strong> Use "Ciente" ou "QSL".</li>
+                <li><strong>Sigilo:</strong> Evite dados sensíveis.</li>
             </ul>
         </div>
 
@@ -279,11 +217,10 @@
             <h2>⚠️ Solução de Problemas</h2>
             <div class="alert-box">
                 <strong>O rádio apitou?</strong><br>
-                Isso geralmente indica <strong>bateria fraca</strong>. Procure a base de apoio imediatamente para trocar o equipamento.
+                Bateria fraca. Troque imediatamente.
             </div>
             <p style="margin-top: 15px; font-size: 0.9rem;">
-                <strong>Não está ouvindo nada?</strong><br>
-                Verifique se o rádio está ligado e o volume ajustado (gire o botão superior direito).
+                <strong>Não ouve nada?</strong> Verifique se o rádio está ligado e o volume alto.
             </p>
         </div>
 
@@ -293,9 +230,8 @@
         <p style="font-size: 1.1rem; font-weight: 500;">Precisa de ajuda técnica?</p>
         <p style="font-size: 0.9rem; margin-bottom: 15px; opacity: 0.8;">Clique abaixo para falar com a TI</p>
         
-        <a href="https://wa.me/558534597061?text=Ol%C3%A1%2C+estou+no+evento+da+SME+e+preciso+de+ajuda+com+o+r%C3%A1dio." 
-           class="btn-support"
-           target="_blank">
+        <a href="https://wa.me/558534597061?text=Ol%C3%A1%2C+preciso+de+ajuda+com+o+r%C3%A1dio." 
+           class="btn-support" target="_blank">
            📱 Chamar no WhatsApp
         </a>
         
