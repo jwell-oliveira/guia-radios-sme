@@ -37,7 +37,7 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
         .header-logo {
-            max-height: 200px;
+            max-height: 150px;
             max-width: 100%;
             width: auto;
             display: block;
@@ -65,6 +65,31 @@
             display: flex;
             align-items: center;
             gap: 8px;
+        }
+
+        /* --- TABELA DE CANAIS (NOVO) --- */
+        .tabela-canais {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+        .tabela-canais th {
+            background-color: var(--cor-primaria);
+            color: var(--branco);
+            text-align: left;
+            padding: 10px;
+            border-radius: 4px 4px 0 0;
+        }
+        .tabela-canais td {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .tabela-canais tr:last-child td { border-bottom: none; }
+        .tabela-canais tr:nth-child(even) { background-color: #f9f9f9; }
+        .canal-numero {
+            font-weight: bold;
+            color: var(--cor-destaque);
+            width: 80px;
         }
 
         /* --- PASSO A PASSO --- */
@@ -148,11 +173,50 @@
 <body>
 
     <header>
-        <img src="logo-educ.png" alt="Logo SME Fortaleza" class="header-logo">
-        <h1>Guia de Uso - Rádio Frequência</h1>
+        <img src="https://via.placeholder.com/150x80?text=LOGO+SME" alt="Logo SME Fortaleza" class="header-logo">
+        <h1>SME Fortaleza</h1>
+        <p>Guia de Uso - Rádio Frequência</p>
     </header>
 
     <div class="container">
+
+        <div class="card" style="border-left-color: var(--cor-destaque);">
+            <h2>📻 Frequência dos Canais</h2>
+            <table class="tabela-canais">
+                <thead>
+                    <tr>
+                        <th>Canal</th>
+                        <th>Operação / Setor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="canal-numero">Canal 01</td>
+                        <td>Transporte</td>
+                    </tr>
+                    <tr>
+                        <td class="canal-numero">Canal 02</td>
+                        <td>Alimentação</td>
+                    </tr>
+                    <tr>
+                        <td class="canal-numero">Canal 10</td>
+                        <td>Baldeirão</td>
+                    </tr>
+                    <tr>
+                        <td class="canal-numero">Canal 11</td>
+                        <td>Escada, Contenção e Banheiros</td>
+                    </tr>
+                    <tr>
+                        <td class="canal-numero">Canal 12</td>
+                        <td>Volante e Achados e Perdidos</td>
+                    </tr>
+                    <tr>
+                        <td class="canal-numero">Canal 13</td>
+                        <td>Comunicação</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
         <div class="card">
             <h2>📢 Como Falar (PTT)</h2>
@@ -198,7 +262,7 @@
                 </div>
             </div>
 
-            <a href="CFO - FORMATURA.pdf" target="_blank" class="btn-pdf">
+            <a href="mapa.pdf" target="_blank" class="btn-pdf">
                 📄 Abrir Planta Completa (PDF)
             </a>
         </div>
@@ -232,7 +296,7 @@
         
         <a href="https://wa.me/558534597061?text=Ol%C3%A1%2C+preciso+de+ajuda+com+o+r%C3%A1dio." 
            class="btn-support" target="_blank">
-           📱 Chamar no WhatsApp
+            📱 Chamar no WhatsApp
         </a>
         
         <br><br><br>
